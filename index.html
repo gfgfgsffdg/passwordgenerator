@@ -1,75 +1,115 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <title>Password Generator</title>
     <style>
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: #fff;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.3s, color 0.3s;
+      }
 
-        .container {
-            width: 400px;
-            padding: 20px;
-            background: #fff;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
+      body.white-mode {
+        background-color: #858885
+        ;
+        color: #fff;
+      }
 
-        h1 {
-            text-align: center;
-        }
+      .container {
+        width: 400px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
+      body.white-mode .container {
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+      }
 
-        input[type="number"], input[type="checkbox"], button {
-            margin-bottom: 10px;
-        }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
 
-        button {
-            display: block;
-            margin: 0 auto;
-        }
+      body.white-mode h1 {
+        color: #fff;
+      }
 
-        #password {
-            width: 100%;
-        }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      body.white-mode label {
+        color: #fff;
+      }
+
+      input[type="number"],
+      input[type="checkbox"],
+      button {
+        margin-bottom: 10px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+
+      #password {
+        width: 100%;
+      }
+
+      .white-mode-toggle {
+        margin-top: 10px;
+        text-align: center;
+      }
+
     </style>
-</head>
-<body>
+  </head>
+
+  <body class="white-mode">
     <div class="container">
-        <h1>Password Generator</h1>
-        <div>
-            <label for="length">Password Length:</label>
-            <input type="number" id="length" name="length" min="4" max="20" value="8">
-        </div>
-        <div>
-            <label for="include-letters">Include Letters:</label>
-            <input type="checkbox" id="include-letters" name="include-letters">
-        </div>
-        <div>
-            <label for="include-numbers">Include Numbers:</label>
-            <input type="checkbox" id="include-numbers" name="include-numbers" checked>
-        </div>
-        <div>
-            <label for="include-symbols">Include Symbols:</label>
-            <input type="checkbox" id="include-symbols" name="include-symbols" checked>
-        </div>
-        <div>
-            <button id="generate-button">Generate Password</button>
-        </div>
-        <div>
-            <input type="text" id="password" readonly>
-        </div>
+      <h1>Password Generator</h1>
+      <div>
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" name="length" min="4" max="20" value="8">
+      </div>
+      <div>
+        <label for="include-letters">Include Letters:</label>
+        <input type="checkbox" id="include-letters" name="include-letters">
+      </div>
+      <div>
+        <label for="include-numbers">Include Numbers:</label>
+        <input type="checkbox" id="include-numbers" name="include-numbers" checked>
+      </div>
+      <div>
+        <label for="include-symbols">Include Symbols:</label>
+        <input type="checkbox" id="include-symbols" name="include-symbols" checked>
+      </div>
+      <div>
+        <button id="generate-button">Generate Password</button>
+      </div>
+      <div>
+        <input type="text" id="password" readonly>
+      </div>
+      <div class="white-mode-toggle">
+        <button id="white-mode-button">Toggle White Mode</button>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
+
 </html>
