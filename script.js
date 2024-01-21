@@ -5,6 +5,7 @@
     var includeSymbolsEl = document.getElementById('include-symbols');
     var generateButton = document.getElementById('generate-button');
     var passwordEl = document.getElementById('password');
+    var whiteModeButton = document.getElementById('white-mode-button');
 
     function generatePassword() {
         var length = parseInt(lengthEl.value);
@@ -31,5 +32,10 @@
         passwordEl.value = password;
     }
 
+    function toggleWhiteMode() {
+        document.body.classList.toggle('white-mode');
+    }
+
     generateButton.addEventListener('click', generatePassword);
+    whiteModeButton.addEventListener('click', toggleWhiteMode);
 })();
