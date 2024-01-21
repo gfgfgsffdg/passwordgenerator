@@ -1,25 +1,35 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var generateBtn = document.getElementById('generateBtn');
-    generateBtn.addEventListener('click', generatePassword);
+(function() {
+    var lengthEl = document.getElementById('length');
+    var includeLettersEl = document.getElementById('include-letters');
+    var includeNumbersEl = document.getElementById('include-numbers');
+    var includeSymbolsEl = document.getElementById('include-symbols');
+    var generateButton = document.getElementById('generate-button');
+    var passwordEl = document.getElementById('password');
 
     function generatePassword() {
-        var passwordLength = document.getElementById('length').value;
-        var includeNumbers = document.getElementById('includeNumbers').checked;
-        var includeSymbols = document.getElementById('includeSymbols').checked;
+        var length = parseInt(lengthEl.value);
+        var includeLetters = includeLettersEl.checked;
+        var includeNumbers = includeNumbersEl.checked;
+        var includeSymbols = includeSymbolsEl.checked;
+        var characters = '';
 
-        var characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if (includeLetters) {
+            characters += 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        }
         if (includeNumbers) {
             characters += '0123456789';
         }
         if (includeSymbols) {
-            characters += '!@#$%^&*()_-+=~`[]{}|:;"<>,.?/';
+            characters += '!@#$%^&*()_+~`|}{[]\:;?><,./-=';
         }
 
         var password = '';
-        for (var i = 0; i < passwordLength; i++) {
+        for (var i = 0; i < length; i++) {
             password += characters.charAt(Math.floor(Math.random() * characters.length));
         }
 
-        document.getElementById('generatedPassword').value = password;
+        passwordEl.value = password;
     }
-});
+
+    generateButton.addEventListener('click', generatePassword);
+})();
