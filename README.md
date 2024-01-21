@@ -10,8 +10,7 @@ This is a simple web-based password generator that allows users to generate rand
 
 ## Accessing the Website
 
-You can access and use the password generator tool on our website: [[https://passwordgenerator.example.com](https://passwordgenerator-9vpknzn0b-gfgfgsffdgs-projects.vercel.app/)]([https://passwordgenerator.example.com](https://passwordgenerator-9vpknzn0b-gfgfgsffdgs-projects.vercel.app/))
-
+You can access and use the password generator tool on my website: https://passwordgenerator-9vpknzn0b-gfgfgsffdgs-projects.vercel.app/
 ## Using the Python Script
 
 If you prefer to use the password generator offline or integrate it into your own Python projects, you can utilize the provided Python script (`password.py`). The script can be executed from the command line, allowing you to specify the desired password length and options for including numbers and symbols.
