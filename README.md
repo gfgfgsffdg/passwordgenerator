@@ -5,6 +5,7 @@ This is a simple web-based password generator that allows users to generate rand
 ## Features
 
 - Generate random passwords of desired length.
+- Choose whether to include letters in generated passwords.
 - Choose whether to include numbers in generated passwords.
 - Choose whether to include symbols in generated passwords.
 
