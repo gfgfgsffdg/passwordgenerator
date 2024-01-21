@@ -4,29 +4,29 @@ This is a simple web-based password generator that allows users to generate rand
 
 ## Features
 
-- Generate random passwords of desired length
-- Choose whether to include numbers in generated passwords
-- Choose whether to include symbols in generated passwords
-  
+- Generate random passwords of desired length.
+- Choose whether to include numbers in generated passwords.
+- Choose whether to include symbols in generated passwords.
+
 ## Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## Getting Started
+## Accessing the Website
 
-To get started with the password generator, follow these steps:
-
-1. Clone the repository: `git clone https://github.com/your-username/password-generator.git`
-2. Navigate to the project directory: `cd password-generator`
-3. Open `index.html` in your web browser
+You can view this project live on [https://passwordgenerator-chi-nine.vercel.app/](https://passwordgenerator-chi-nine.vercel.app/).
 
 ## Usage
 
-1. Enter the desired password length (4-20 characters) in the input field.
-2. Check the box labeled "Include Numbers" if you want to include numbers in the generated password.
-3. Check the box labeled "Include Symbols" if you want to include symbols in the generated password.
-4. Click the "Generate Password" button to generate a random password.
-5. The generated password will be displayed in the input field below.
-6. If the password length is below 7 characters, a warning message will be displayed in red.
+1. Open the website using the URL mentioned above.
+2. Enter the desired password length in the input field.
+3. Check the box labeled "Include Numbers" to include numbers in the generated password.
+4. Check the box labeled "Include Symbols" to include symbols in the generated password.
+5. Click the "Generate Password" button to generate a random password.
+6. The generated password will be displayed on the website.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
