@@ -31,6 +31,7 @@ Feel free to incorporate the Python script into your own projects or customize i
 - CSS
 - JavaScript
 - Python
+- AI (Artificial Intelligence)
 
 ## License
 
